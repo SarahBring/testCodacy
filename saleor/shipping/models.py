@@ -152,6 +152,8 @@ class ShippingMethod(ModelWithMetadata):
     maximum_order_weight = MeasurementField(
         measurement=Weight, unit_choices=WeightUnits.CHOICES, blank=True, null=True
     )
+    minimum_delivery_days = models.PositiveIntegerField(null=True, blank=True)
+    maximum_delivery_days = models.PositiveIntegerField(null=True, blank=True)
 
     objects = ShippingMethodQueryset.as_manager()
     translated = TranslationProxy()
