@@ -4574,6 +4574,8 @@ type ShippingMethod implements Node & ObjectWithMetadata {
   name: String!
   minimumOrderWeight: Weight
   maximumOrderWeight: Weight
+  maximumDeliveryDays: Int
+  minimumDeliveryDays: Int
   privateMetadata: [MetadataItem]!
   metadata: [MetadataItem]!
   type: ShippingMethodTypeEnum
@@ -4652,6 +4654,8 @@ input ShippingPriceInput {
   name: String
   minimumOrderWeight: WeightScalar
   maximumOrderWeight: WeightScalar
+  maximumDeliveryDays: Int
+  minimumDeliveryDays: Int
   type: ShippingMethodTypeEnum
   shippingZone: ID
 }
